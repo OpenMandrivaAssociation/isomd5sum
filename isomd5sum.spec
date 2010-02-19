@@ -1,13 +1,13 @@
-Summary: Utilities for working with md5sum implanted in ISO images
-Name: isomd5sum
-Version: 1.0.5
-Release: %mkrel 1
-License: GPLv2+
-Group: Archiving/Cd burning
-URL: http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
-Source0: http://fedorahosted.org/releases/i/s/isomd5sum/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: popt-devel
+Summary:	Utilities for working with md5sum implanted in ISO images
+Name:		isomd5sum
+Version:	1.0.5
+Release:	%mkrel 2
+License:	GPLv2+
+Group:		Archiving/Cd burning
+URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
+Source0:	http://fedorahosted.org/releases/i/s/isomd5sum/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires:	popt-devel
 
 %description
 The isomd5sum package contains utilities for implanting and verifying
