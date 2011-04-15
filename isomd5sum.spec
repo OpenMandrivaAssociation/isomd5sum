@@ -1,11 +1,14 @@
 Summary:	Utilities for working with md5sum implanted in ISO images
 Name:		isomd5sum
-Version:	1.0.5
-Release:	%mkrel 3
+Version:	1.0.7
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
 Source0:	http://fedorahosted.org/releases/i/s/isomd5sum/%{name}-%{version}.tar.bz2
+Patch0:		isomd5sum-1.0.7-makefile.patch
+Patch1:		isomd5sum-1.0.7-unused.patch
+Patch2:		isomd5sum-1.0.7-nowerror.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	popt-devel
 
@@ -25,6 +28,7 @@ implanting and checking.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 make checkisomd5 implantisomd5
