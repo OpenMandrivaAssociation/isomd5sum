@@ -34,11 +34,11 @@ implanting and checking.
 make checkisomd5 implantisomd5
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT install-bin install-devel
+rm -rf %{buildroot}
+make DESTDIR=%{buildroot} install-bin install-devel
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
