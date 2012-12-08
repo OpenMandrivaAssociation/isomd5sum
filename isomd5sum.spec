@@ -34,11 +34,11 @@ implanting and checking.
 make checkisomd5 implantisomd5
 
 %install
-rm -rf %{buildroot}
-make DESTDIR=%{buildroot} install-bin install-devel
+rm -rf $RPM_BUILD_ROOT
+make DESTDIR=$RPM_BUILD_ROOT install-bin install-devel
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
@@ -52,3 +52,27 @@ rm -rf %{buildroot}
 %_includedir/*.h
 %_libdir/*.a
 
+
+
+%changelog
+* Fri Apr 15 2011 Eugeni Dodonov <eugeni@mandriva.com> 1.0.7-1mdv2011.0
++ Revision: 653214
+- New version 1.0.7.
+  P0: compile with make
+  P1: declare variable as unused
+  P2: disable -Werror
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.1 packages
+
+* Fri Feb 19 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.0.5-2mdv2010.1
++ Revision: 508385
+- fix rpmlint warning on spec (mixed of spaces and tabs)
+
+* Sun Dec 20 2009 Thierry Vignaud <tv@mandriva.org> 1.0.5-1mdv2010.1
++ Revision: 480256
+- import isomd5sum
+
+
+* Sun Dec 20 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.0.5-1mdv2010.1
+- initial release
