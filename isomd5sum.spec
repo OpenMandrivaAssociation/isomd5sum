@@ -1,7 +1,7 @@
 Summary:	Utilities for working with md5sum implanted in ISO images
 Name:		isomd5sum
 Version:	1.0.10
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
