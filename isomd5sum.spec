@@ -33,7 +33,9 @@ Python bindings for isomd5sum.
 %setup -q
 
 %build
-export CFLAGS="%{optflags} -Wno-strict-aliasing"
+export CFLAGS="%{optflags} -Wno-strict-aliasing  -Qunused-arguments"
+export CXXFLAGS="%{optflags} -Qunused-arguments"
+
 make checkisomd5 implantisomd5 pyisomd5sum.so
 
 %install
