@@ -37,7 +37,7 @@ Python bindings for isomd5sum.
 export CFLAGS="%{optflags} -Wno-strict-aliasing  -Qunused-arguments"
 export CXXFLAGS="%{optflags} -Qunused-arguments"
 
-sed -i -e 's/shell python/shell python2//' Makefile
+sed -i -e 's/shell python/shell python2/' Makefile
 
 %make checkisomd5 implantisomd5 pyisomd5sum.so
 
