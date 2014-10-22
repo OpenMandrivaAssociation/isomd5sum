@@ -6,7 +6,8 @@ License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
 Source0:	http://fedorahosted.org/releases/i/s/isomd5sum/%{name}-%{version}.tar.bz2
-BuildRequires:	popt-devel
+BuildRequires:	pkgconfig(popt)
+BuildRequires:	pkgconfig(python2)
 
 %description
 The isomd5sum package contains utilities for implanting and verifying
@@ -35,8 +36,9 @@ Python bindings for isomd5sum.
 %build
 export CFLAGS="%{optflags} -Wno-strict-aliasing  -Qunused-arguments"
 export CXXFLAGS="%{optflags} -Qunused-arguments"
+export PYTHON="%{_python2"
 
-make checkisomd5 implantisomd5 pyisomd5sum.so
+%make checkisomd5 implantisomd5 pyisomd5sum.so
 
 %install
 make DESTDIR=%{buildroot} install-bin install-devel install-python
