@@ -36,7 +36,7 @@ Python bindings for isomd5sum.
 %build
 export CFLAGS="%{optflags} -Wno-strict-aliasing  -Qunused-arguments"
 export CXXFLAGS="%{optflags} -Qunused-arguments"
-export PYTHON="%{_python2"
+export PYTHON=%{_python2}
 
 %make checkisomd5 implantisomd5 pyisomd5sum.so
 
@@ -54,4 +54,4 @@ make DESTDIR=%{buildroot} install-bin install-devel install-python
 %_libdir/*.a
 
 %files -n python-isomd5sum
-%{python_sitearch}/pyisomd5sum.so
+%{python2_sitearch}/pyisomd5sum.so
