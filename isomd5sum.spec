@@ -38,7 +38,7 @@ export CFLAGS="%{optflags} -Wno-strict-aliasing  -Qunused-arguments"
 export CXXFLAGS="%{optflags} -Qunused-arguments"
 export PYTHON="/usr/bin/python2"
 
-%make checkisomd5 implantisomd5 pyisomd5sum.so
+%make checkisomd5 implantisomd5 pyisomd5sum.so PYVER=2.7
 
 %install
 make DESTDIR=%{buildroot} install-bin install-devel install-python
