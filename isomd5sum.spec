@@ -1,7 +1,7 @@
 Summary:	Utilities for working with md5sum implanted in ISO images
 Name:		isomd5sum
-Version:	1.0.10
-Release:	7
+Version:	1.0.12
+Release:	1
 License:	GPLv2+
 Group:		Archiving/Cd burning
 URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
@@ -46,13 +46,13 @@ make DESTDIR=%{buildroot} install-bin install-devel install-python
 
 %files
 %doc COPYING
-%_bindir/implantisomd5
-%_bindir/checkisomd5
-%_mandir/man*/*
+%{_bindir}/implantisomd5
+%{_bindir}/checkisomd5
+%{_mandir}/man*/*
 
 %files devel
-%_includedir/*.h
-%_libdir/*.a
+%{_includedir}/*.h
+%{_libdir}/*.a
 
 %files -n python-isomd5sum
 %{python2_sitearch}/pyisomd5sum.so
