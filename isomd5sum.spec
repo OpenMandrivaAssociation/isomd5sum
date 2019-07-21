@@ -7,7 +7,7 @@ Group:		Archiving/Cd burning
 URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
 Source0:	https://github.com/rhinstaller/isomd5sum/archive/%{version}.tar.gz
 BuildRequires:	pkgconfig(popt)
-BuildRequires:	pkgconfig(python2)
+BuildRequires:	pkgconfig(python)
 
 %description
 The isomd5sum package contains utilities for implanting and verifying
