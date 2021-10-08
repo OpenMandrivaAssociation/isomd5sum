@@ -36,7 +36,7 @@ Python bindings for isomd5sum.
 %autosetup -p1
 
 %build
-export CFLAGS="%{optflags} -Wno-strict-aliasing -Qunused-arguments"
+export CFLAGS="%{optflags} -Wno-strict-aliasing -Qunused-arguments -fuse-ld=bfd"
 export CXXFLAGS="%{optflags} -Qunused-arguments"
 
 PYTHON=%{__python} %make_build checkisomd5 implantisomd5 pyisomd5sum.so
