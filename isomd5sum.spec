@@ -3,7 +3,7 @@
 
 Summary:	Utilities for working with md5sum implanted in ISO images
 Name:		isomd5sum
-Version:	1.2.3
+Version:	1.2.5
 Release:	1
 License:	GPLv2+
 Group:		Archiving/Cd burning
