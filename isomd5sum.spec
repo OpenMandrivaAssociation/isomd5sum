@@ -7,7 +7,7 @@ Version:	1.2.5
 Release:	1
 License:	GPLv2+
 Group:		Archiving/Cd burning
-URL:		http://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
+URL:		https://git.fedorahosted.org/git/?p=isomd5sum.git;a=summary
 Source0:	https://github.com/rhinstaller/isomd5sum/archive/%{version}.tar.gz
 BuildRequires:	pkgconfig(popt)
 BuildRequires:	pkgconfig(python)
